@@ -1,19 +1,19 @@
 part of background_service;
 
 class BackgrundDataTask {
-  // Function that will be performed
+  /// Function that will be performed
   Future<bool> Function()? callback;
 
-  // Number of milliseconds when this task will fire.
+  /// Number of milliseconds when this task will fire.
   int? millisecondsDelay;
 
-  // Unique taskId. This taskId will be provided to the BackgroundFetch callback function for use with [BackgroundFetch.finish]
+  /// Unique taskId. This taskId will be provided to the BackgroundFetch callback function for use with [BackgroundFetch.finish]
   String? taskId;
 
-  // IIf true, the function will only be executed in parallel, after finishing the tasks with task == null || task == false
+  /// IIf true, the function will only be executed in parallel, after finishing the tasks with task == null || task == false
   bool? awaited;
 
-  // If true, the function will only be executed one after the other, after finishing the tasks with task == null || task == false
+  /// If true, the function will only be executed one after the other, after finishing the tasks with task == null || task == false
   bool? awaitedInLIne;
 
   BackgrundDataTask({
